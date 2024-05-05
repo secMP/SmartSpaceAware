@@ -1,0 +1,22 @@
+[
+  {
+    "device" : "Smart Coffee Maker",
+    "sensor" : "Microphone",
+    "purpose": "Brewing Coffee Faster",
+    "dataType" : "Audio of the User",
+    "dataRention": "Forever",
+    "dataAccess": "Manufacturing Company, Organization",
+    "description": "The coffee machine uses an app and voice controls to brew coffee on demand. The machine can also store your schedule for brewing.",
+    "images" : ["images/OfficeKitchenBlank.png", "images/OfficeKitchenCamera.png"]
+  },
+  {
+    "device" : "Smart Coffee Maker",
+    "sensor" : "Microphone",
+    "purpose": "Brewing Coffee Faster",
+    "dataType" : "Audio of the User",
+    "dataRention": "Forever",
+    "dataAccess": "Manufacturing Company, Organization",
+    "description": "The coffee machine uses an app and voice controls to brew coffee on demand. The machine can also store your schedule for brewing.",
+    "images" : ["images/OfficeKitchenBlank.png", "images/OfficeKitchenCamera.png"]
+  }
+]

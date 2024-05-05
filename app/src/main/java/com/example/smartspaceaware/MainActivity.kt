@@ -11,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.smartspaceaware.helper.PermissionCheck
 import com.example.smartspaceaware.ui.theme.SmartSpaceAwareTheme
 
 class MainActivity : ComponentActivity() {
+    val  permissionCheck = PermissionCheck(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
