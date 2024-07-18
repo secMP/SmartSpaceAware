@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.example.smartspaceaware.Dummy
+import com.example.smartspaceaware.MainActivity
 import com.example.smartspaceaware.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -27,8 +28,16 @@ private fun createNotification(
     myFirebaseMessagingService: MyFirebaseMessagingService,
     message: RemoteMessage,
 ) {
-    val intent = Intent(myFirebaseMessagingService.applicationContext, Dummy::class.java).apply {
+    var intent = Intent()
+    if(message.notification!!.title.toString() == "Shared Space Dummy"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, Dummy::class.java).apply {
             flags =  Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("click_action", message.data.get("click_action").toString())
+        }
+    }else if (message.notification!!.title.toString() == "Shared Space Kitchen"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
     }
 
     val pendingIntent: PendingIntent = PendingIntent.getActivity(myFirebaseMessagingService.applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)

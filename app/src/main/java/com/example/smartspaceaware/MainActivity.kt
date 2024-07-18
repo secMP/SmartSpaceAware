@@ -1,7 +1,9 @@
 package com.example.smartspaceaware
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -30,14 +32,14 @@ class MainActivity : ComponentActivity() {
                 permissionCheck.AskPermission()
                 createButtonMenu(modifier = Modifier)
             }
-            if(this.intent.extras != null){
-                val context = LocalContext.current
-                val caseString = this.intent.extras?.getString("click_action").toString()
-                if (caseString == "Dummy"){
-                    context.startActivity(Intent( context, Dummy::class.java))
-                }
-            }
+            connectActivity(this.intent, LocalContext.current)
+            Log.d("STRING", this.intent.extras.toString())
+
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 }
 
@@ -94,5 +96,15 @@ fun createButtonMenu(modifier: Modifier = Modifier){
 @Composable
 fun GreetingPreview() {
     createButtonMenu()
+}
+
+fun connectActivity(intent: Intent, context: Context){
+    if(intent.extras != null){
+        Log.d("STRING_ONCREATE", intent.extras?.getString("click_action").toString())
+        val caseString = intent.extras?.getString("click_action").toString()
+        if (caseString == "Dummy"){
+            context.startActivity(Intent( context, Dummy::class.java))
+        }
+    }
 }
 
