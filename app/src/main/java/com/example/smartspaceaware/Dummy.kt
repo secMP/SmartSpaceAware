@@ -11,7 +11,7 @@ class Dummy : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent{
             SmartSpaceAwareTheme {
-                LayoutTable(this, "dummy.json")
+                LayoutTable(this, "dummyData.json", R.drawable.dummy2)
             }
         }
     }

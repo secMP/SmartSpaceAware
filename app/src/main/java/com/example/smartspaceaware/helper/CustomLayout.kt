@@ -22,23 +22,22 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.smartspaceaware.R
 
 class CustomLayout (){
 }
 
 
 @Composable
-fun LayoutTable(context: Context, fileName: String){
+fun LayoutTable(context: Context, fileName: String, imgTable: Int){
     val data = DataParser(context,fileName).DataReader()
     LazyColumn {
         items(data){ d ->
-            LayoutCard(Modifier, d)
+            LayoutCard(Modifier, d, imgTable)
         }
     }
 }
 @Composable
-fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData){
+fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData, imgTable: Int){
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp
@@ -68,10 +67,13 @@ fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData){
             CreateElement("Data Access" ,  d.dataAccess.toString())
             CreateElement("Description" ,  d.description.toString())
             Image(
-                painter = painterResource(id = R.drawable.dummy),
+                painter = painterResource(id = imgTable),
                 contentDescription = "",
                 contentScale = ContentScale.Fit
             )
+
+
+
         }
 
 

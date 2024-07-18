@@ -7,7 +7,7 @@ data class ContextualIntegrityData(
     @SerializedName("sensor")@Expose var sensor: String?=null,
     @SerializedName("purpose")@Expose var purpose: String?=null,
     @SerializedName("dataType")@Expose var dataType: String?=null,
-    @SerializedName("dataRention")@Expose var dataRetention: String?=null,
+    @SerializedName("dataRetention")@Expose var dataRetention: String?=null,
     @SerializedName("dataAccess")@Expose var dataAccess: String?=null,
     @SerializedName("description")@Expose var description: String?=null,
     @SerializedName("images")@Expose var image: Array<String>?=null
