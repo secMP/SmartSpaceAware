@@ -1,0 +1,42 @@
+[
+    {
+        "device" : "Smart Speaker",
+        "sensor" : "Microphone",
+        "purpose": "Device Controls, Weather Updates",
+        "dataType" : "Audio of the Users",
+        "dataRetention": "Forever",
+        "dataAccess": "Device Manufacturing Company, Organization, Service Providers, Facilities Management",
+        "description": "The speaker is used to knowing the weather updates and controlling the media and devices in the room.",
+        "images" : ["images/KitchenSpeaker1.png", "images/KitchenSpeaker2.png"]
+    },
+    {
+        "device" : "Smart Camera",
+        "sensor" : "Microphone, Video Camera",
+        "dataType": "Video of the Room, Video of the Users in Conference",
+        "purpose" : "Space Utilization, Conducting Video Conference",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management, Person on the Conference",
+        "description": "The purpose of the device is to send video data to Facilities Management to determine space utilization and, additionally, to use the device for video conferencing.",
+        "images" : ["images/KitchenCamera1.png", "images/KitchenCamera2.png"]
+    },
+    {
+        "device" : "Smart Lights",
+        "sensor" : "Motion Sensor, Ambient Lights Sensor",
+        "purpose": "Automatic Light Control",
+        "dataType": "Motion Detection, Light Intensity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Facilities Management",
+        "description": "This helps to turn on/off the lights based on the motion and ambient light.",
+        "images" : ["images/KitchenLight1.png", "images/KitchenLight1.png"]
+    },
+    {
+        "device" : "Smart Thermostat",
+        "sensor" : "Temperature Sensor, Humidity Sensor",
+        "purpose": "Auto Climate Control",
+        "dataType" : "Temperature, Humidity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management",
+        "description": "The device is used to control the climate automatically, based on the temperatures set by the Facilities management.",
+        "images" : ["images/KitchenThermo1.png", "images/KitchenThermo1.png"]
+    }
+]

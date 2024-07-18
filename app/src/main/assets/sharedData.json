@@ -1,0 +1,43 @@
+[
+    {
+        "device" : "Smart Speaker",
+        "sensor" : "Microphone",
+        "purpose": "Device Controls",
+        "dataType" : "Audio of the Users",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization",
+        "description": "The speaker controls the media and devices in the room. ",
+        "images" : ["images/SharedSpaceSpeaker1.png", "images/SharedSpaceSpeaker2.png"]
+    },
+    {
+        "device" : "Smart Camera",
+        "sensor" : "Microphone, Video Camera",
+        "dataType": "Video of the Room",
+        "purpose" : "Space Utilization, Seat/Table Reservations",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management",
+        "description": "The device's purpose is to send the video data to the Facilities Management to learn about space utilization. Additionally, the camera is used for reservation of seats/tables by the smart space user.",
+        "images" : ["images/SharedSpaceCamera1.png", "images/SharedSpaceCamera2.png"]
+    },
+    {
+        "device" : "Smart Lights",
+        "sensor" : "Motion Sensor, Ambient Lights Sensor",
+        "purpose": "Automatic Light Control",
+        "dataType" : "Motion Detection, Light Intensity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization",
+        "description": "This helps to turn on/off the lights based on the motion and ambient light.",
+        "images" : ["images/SharedSpaceLight1.png", "images/SharedSpaceLight1.png"]
+    },
+    {
+        "device" : "Smart Thermostat",
+        "sensor" : "Temperature Sensor, Humidity Sensor",
+        "purpose": "Auto Climate Control",
+        "dataType" : "Temperature, Humidity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management",
+        "description": "The device is used to control the climate automatically, based on the temperatures set by the Facilities Management.",
+        "images" : ["images/SharedSpaceThermo1.png", "images/SharedSpaceThermo2.png"]
+    }
+]
+

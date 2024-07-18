@@ -1,0 +1,42 @@
+[
+    {
+        "device" : "Smart Speaker",
+        "sensor" : "Microphone",
+        "purpose": "Device Controls, Meeting Notes",
+        "dataType" : "Audio of the Users",
+        "dataRetention": "3 Months",
+        "dataAccess": "Manufacturing Company, Organization",
+        "description": "The speaker takes meeting notes with the help of AI, and the notes and audio are stored together for three months on the cloud. Additionally, the device controls the media and devices in the room. ",
+        "images" : ["images/MeetingRoomSpeaker1.png", "images/MeetingRoomSpeaker1.png"]
+    },
+    {
+        "device" : "Smart Camera",
+        "sensor" : "Microphone, Video Camera",
+        "purpose" : "Space Utilization, Conducting Video Conference",
+        "dataType": "Video of the Room, Video of the Users in Conference",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management, Person on the Conference",
+        "description": "The device's purpose is to send the video data to the Facilities Management to learn about space utilization. Additionally, to use the device for video conferencing.",
+        "images" : ["images/MeetingRoomCamera1.png", "images/MeetingRoomSpeaker2.png"]
+    },
+    {
+        "device" : "Smart Lights",
+        "sensor" : "Motion Sensor, Ambient Lights Sensor",
+        "purpose": "Automatic Light Control",
+        "dataType": "Motion Detection, Light Intensity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization",
+        "description": "This helps to turn on/off the lights based on the motion and ambient light.",
+        "images" : ["images/MeetingRoomLights1.png", "images/MeetingRoomLights1.png"]
+    },
+    {
+        "device" : "Smart Thermostat",
+        "sensor" : "Temperature Sensor, Humidity Sensor",
+        "purpose": "Auto Climate Control",
+        "dataType" : "Temperature, Humidity",
+        "dataRetention": "Forever",
+        "dataAccess": "Manufacturing Company, Organization, Facilities Management",
+        "description": "The device is used to control the climate automatically, based on the temperatures set by the Facilities Management.",
+        "images" : ["images/MeetingRoomThermo1.png", "images/MeetingRoomThermo2.png"]
+    }
+]
