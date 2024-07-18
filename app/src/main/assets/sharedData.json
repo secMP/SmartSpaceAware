@@ -7,7 +7,7 @@
         "dataRetention": "Forever",
         "dataAccess": "Manufacturing Company, Organization",
         "description": "The speaker controls the media and devices in the room. ",
-        "images" : ["images/SharedSpaceSpeaker1.png", "images/SharedSpaceSpeaker2.png"]
+        "images" : "sharedspacespeaker2"
     },
     {
         "device" : "Smart Camera",
@@ -17,7 +17,7 @@
         "dataRetention": "Forever",
         "dataAccess": "Manufacturing Company, Organization, Facilities Management",
         "description": "The device's purpose is to send the video data to the Facilities Management to learn about space utilization. Additionally, the camera is used for reservation of seats/tables by the smart space user.",
-        "images" : ["images/SharedSpaceCamera1.png", "images/SharedSpaceCamera2.png"]
+        "images" : "sharedspacecamera2"
     },
     {
         "device" : "Smart Lights",
@@ -27,7 +27,7 @@
         "dataRetention": "Forever",
         "dataAccess": "Manufacturing Company, Organization",
         "description": "This helps to turn on/off the lights based on the motion and ambient light.",
-        "images" : ["images/SharedSpaceLight1.png", "images/SharedSpaceLight1.png"]
+        "images" : "sharedspacelight1"
     },
     {
         "device" : "Smart Thermostat",
@@ -37,7 +37,7 @@
         "dataRetention": "Forever",
         "dataAccess": "Manufacturing Company, Organization, Facilities Management",
         "description": "The device is used to control the climate automatically, based on the temperatures set by the Facilities Management.",
-        "images" : ["images/SharedSpaceThermo1.png", "images/SharedSpaceThermo2.png"]
+        "images" : "sharedspacethermo1"
     }
 ]
 

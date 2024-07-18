@@ -53,28 +53,36 @@ fun createButtonMenu(modifier: Modifier = Modifier){
             .fillMaxSize()
     ){
         ElevatedButton(
-            onClick = { /*TODO*/ },
+            onClick = {
+                context.startActivity(Intent(context, Kitchen::class.java))
+            },
             modifier = Modifier
                 .padding(10.dp)
         ) {
             Text(text = "Office Kitchen")
         }
         ElevatedButton(
-            onClick = { /*TODO*/ },
+            onClick = {
+                context.startActivity(Intent(context, Shared::class.java))
+            },
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            Text(text = "Working Space")
+            Text(text = "Shared Space")
         }
         ElevatedButton(
-            onClick = { /*TODO*/ },
+            onClick = {
+                context.startActivity(Intent(context, Private::class.java))
+            },
             modifier = Modifier
                 .padding(10.dp)
         ) {
             Text(text = "Private Office")
         }
         ElevatedButton(
-            onClick = { /*TODO*/ },
+            onClick = {
+                context.startActivity(Intent(context, Meeting::class.java))
+            },
             modifier = Modifier
                 .padding(10.dp)
         ) {
@@ -104,6 +112,14 @@ fun connectActivity(intent: Intent, context: Context){
         val caseString = intent.extras?.getString("click_action").toString()
         if (caseString == "Dummy"){
             context.startActivity(Intent( context, Dummy::class.java))
+        }else if (caseString == "Kitchen"){
+            context.startActivity(Intent(context, Kitchen::class.java))
+        }else if (caseString == "Shared"){
+            context.startActivity(Intent(context, Shared::class.java))
+        }else if (caseString == "Private"){
+            context.startActivity(Intent(context, Private::class.java))
+        }else if (caseString == "Meeting"){
+            context.startActivity(Intent(context, Meeting::class.java))
         }
     }
 }

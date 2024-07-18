@@ -7,6 +7,6 @@
         "dataRetention": "Forever",
         "dataAccess": "Manufacturing Company, Organization",
         "description": "The coffee machine uses an app and voice controls to brew coffee on demand. The machine can also store your brewing schedule.",
-        "images" : "dummy2.png"
+        "images" : "dummy2"
     }
 ]

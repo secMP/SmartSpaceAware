@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -28,16 +29,16 @@ class CustomLayout (){
 
 
 @Composable
-fun LayoutTable(context: Context, fileName: String, imgTable: Int){
+fun LayoutTable(context: Context, fileName: String){
     val data = DataParser(context,fileName).DataReader()
     LazyColumn {
         items(data){ d ->
-            LayoutCard(Modifier, d, imgTable)
+            LayoutCard(Modifier, d)
         }
     }
 }
 @Composable
-fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData, imgTable: Int){
+fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData){
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp
@@ -66,13 +67,17 @@ fun LayoutCard(modifier: Modifier, d: ContextualIntegrityData, imgTable: Int){
             CreateElement("Data Retention" ,  d.dataRetention.toString())
             CreateElement("Data Access" ,  d.dataAccess.toString())
             CreateElement("Description" ,  d.description.toString())
+            val context = LocalContext.current
+            val drawid = context.resources.getIdentifier(
+                d.image.toString(),
+                "drawable",
+                context.packageName
+            )
             Image(
-                painter = painterResource(id = imgTable),
+                painter = painterResource(drawid),
                 contentDescription = "",
                 contentScale = ContentScale.Fit
             )
-
-
 
         }
 

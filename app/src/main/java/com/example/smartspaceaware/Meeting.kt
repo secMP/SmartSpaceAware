@@ -6,14 +6,13 @@ import androidx.activity.compose.setContent
 import com.example.smartspaceaware.helper.LayoutTable
 import com.example.smartspaceaware.ui.theme.SmartSpaceAwareTheme
 
-class Dummy : ComponentActivity() {
+class Meeting : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent{
+        setContent {
             SmartSpaceAwareTheme {
-                LayoutTable(this, "dummyData.json")
+                LayoutTable(this, "meetingData.json" )
             }
         }
     }
-
 }

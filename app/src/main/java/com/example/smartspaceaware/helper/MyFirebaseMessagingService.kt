@@ -8,8 +8,11 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.example.smartspaceaware.Dummy
-import com.example.smartspaceaware.MainActivity
+import com.example.smartspaceaware.Kitchen
+import com.example.smartspaceaware.Meeting
+import com.example.smartspaceaware.Private
 import com.example.smartspaceaware.R
+import com.example.smartspaceaware.Shared
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -29,16 +32,37 @@ private fun createNotification(
     message: RemoteMessage,
 ) {
     var intent = Intent()
-    if(message.notification!!.title.toString() == "Shared Space Dummy"){
+    if(message.notification!!.title.toString() == "Smart Space Dummy"){
         intent = Intent(myFirebaseMessagingService.applicationContext, Dummy::class.java).apply {
             flags =  Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             putExtra("click_action", message.data.get("click_action").toString())
         }
-    }else if (message.notification!!.title.toString() == "Shared Space Kitchen"){
-        intent = Intent(myFirebaseMessagingService.applicationContext, MainActivity::class.java).apply {
+    }
+    else if (message.notification!!.title.toString() == "Smart Space Kitchen"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, Kitchen::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("click_action", message.data.get("click_action").toString())
         }
     }
+    else if (message.notification!!.title.toString() == "Smart Space Shared"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, Shared::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("click_action", message.data.get("click_action").toString())
+        }
+    }
+    else if (message.notification!!.title.toString() == "Smart Space Meeting"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, Meeting::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("click_action", message.data.get("click_action").toString())
+        }
+    }
+    else if (message.notification!!.title.toString() == "Smart Space Private"){
+        intent = Intent(myFirebaseMessagingService.applicationContext, Private::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("click_action", message.data.get("click_action").toString())
+        }
+    }
+
 
     val pendingIntent: PendingIntent = PendingIntent.getActivity(myFirebaseMessagingService.applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 

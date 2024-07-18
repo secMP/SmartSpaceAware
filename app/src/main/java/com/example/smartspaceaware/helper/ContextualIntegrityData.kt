@@ -10,5 +10,5 @@ data class ContextualIntegrityData(
     @SerializedName("dataRetention")@Expose var dataRetention: String?=null,
     @SerializedName("dataAccess")@Expose var dataAccess: String?=null,
     @SerializedName("description")@Expose var description: String?=null,
-    @SerializedName("images")@Expose var image: Array<String>?=null
+    @SerializedName("images")@Expose var image: String?=null
 )
